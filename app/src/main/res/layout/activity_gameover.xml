@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="10"
+    tools:context="com.kghy1234gmail.insanedragon.GameoverActivity">
+
+    <ImageView
+        android:id="@+id/img_champion"
+        android:layout_width="100dp"
+        android:layout_height="0dp"
+        android:layout_weight="2.5"
+        android:layout_gravity="center_horizontal"
+        android:scaleType="centerCrop"
+        android:background="#000000"
+        android:src="@drawable/char_a_02"
+        android:layout_marginTop="8dp"
+        android:clickable="true"
+        android:onClick="clickChampion"/>
+
+    <LinearLayout
+        android:layout_width="280dp"
+        android:layout_height="0dp"
+        android:layout_weight="5.5"
+        android:orientation="vertical"
+        android:background="@drawable/ui_gameover_back"
+        android:layout_gravity="center_horizontal"
+        android:paddingBottom="16dp">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/ui_gameover_label_champion"/>
+
+            <TextView
+                android:id="@+id/tv_champion_score"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="0000000"
+                android:textColor="#ff8800"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/ui_gameover_label_yourscore"/>
+
+            <TextView
+                android:id="@+id/tv_player_score"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="0000000"
+                android:textColor="#888888"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2">
+
+        <ImageView
+            android:id="@+id/btn_retry"
+            android:layout_width="160dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="100dp"
+            android:src="@drawable/btn_selector_retry"
+            android:layout_gravity="center"
+            android:clickable="true"
+            android:onClick="clickRetry"/>
+
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/btn_selector_exit"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="100dp"
+            android:clickable="true"
+            android:onClick="clickExit"/>
+
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>
